@@ -1,0 +1,264 @@
+<link href="approval/StyleSheet.css" rel="stylesheet" />
+<div class="row">
+    <!-- begin col-3 -->
+    <div class="col-sm-6 col-lg-3">
+      <!-- begin widget -->
+      <div class="widget widget-stat widget-stat-right bg-inverse text-white">
+        <div class="widget-stat-btn"><a href="javascript:;" data-click="widget-reload"><i class="fa fa-repeat"></i></a></div>
+        <div class="widget-stat-icon"><i class="fa fa-users"></i></div>
+        <a href="../myteam/index.html"><div class="widget-stat-info">
+          <div class="widget-stat-title" style="color: #fff !important; text-decoration: none;">My Teams</div>
+          <div class="widget-stat-number" style="color: #fff !important; text-decoration: none;">4</div>
+        </div></a>
+        <div class="widget-stat-progress">
+          <div class="progress">
+            <div class="progress-bar" style="width: 80%"></div>
+          </div>
+        </div>
+        <div class="widget-stat-footer text-left">22% left for weekly milestone</div>
+      </div>
+      <!-- end widget -->
+    </div>
+    <!-- end col-3 -->
+    <!-- begin col-3 -->
+    <div class="btn col-sm-6 col-lg-3" data-toggle="modal" data-target="#myModal">
+      <!-- begin widget -->
+      <div class="widget widget-stat widget-stat-right bg-success text-white">
+        <div class="widget-stat-btn"><a href="javascript:;" data-click="widget-reload"><i class="fa fa-repeat"></i></a></div>
+        <div class="widget-stat-icon"><i class="fa fa-diamond"></i></div>
+        <div class="widget-stat-info">
+          <div class="widget-stat-title">Pending Approvals</div>
+          <div class="widget-stat-number">11</div>
+        </div>
+        <div class="widget-stat-progress">
+          <div class="progress">
+            <div class="progress-bar" style="width: 60%"></div>
+          </div>
+        </div>
+        <div class="widget-stat-footer">10.2% better than last week</div>
+      </div>
+      <!-- end widget -->
+    </div>
+    <!-- end col-3 -->
+    <!-- begin col-3 -->
+    <div class="col-sm-6 col-lg-3">
+      <!-- begin widget -->
+      <div class="widget widget-stat widget-stat-right bg-primary text-white">
+        <div class="widget-stat-btn"><a href="javascript:;" data-click="widget-reload"><i class="fa fa-repeat"></i></a></div>
+        <div class="widget-stat-icon"><i class="fa fa-hdd-o"></i></div>
+        <div class="widget-stat-info">
+          <div class="widget-stat-title">Today's Events</div>
+          <div class="widget-stat-number">4</div>
+        </div>
+        <div class="widget-stat-progress">
+          <div class="progress">
+            <div class="progress-bar" style="width: 50%"></div>
+          </div>
+        </div>
+        <div class="widget-stat-footer">2 Appointments left</div>
+      </div>
+      <!-- end widget -->
+    </div>
+    <!-- end col-3 -->
+    <!-- begin col-3 -->
+    <div class="col-sm-6 col-lg-3">
+      <!-- begin widget -->
+      <div class="widget widget-stat widget-stat-right bg-info text-white">
+        <div class="widget-stat-btn"><a href="javascript:;" data-click="widget-reload"><i class="fa fa-repeat"></i></a></div>
+        <div class="widget-stat-icon"><i class="fa fa-file"></i></div>
+        <div class="widget-stat-info">
+          <div class="widget-stat-title">My Course</div>
+          <div class="widget-stat-number">9</div>
+        </div>
+        <div class="widget-stat-progress">
+          <div class="progress">
+            <div class="progress-bar" style="width: 70%"></div>
+          </div>
+        </div>
+        <div class="widget-stat-footer">3 new transaction</div>
+      </div>
+      <!-- end widget -->
+    </div>
+    <!-- end col-3 -->
+  </div>
+
+
+
+<!-- MODAL -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content" ng-controller="mycontroller">
+      <div class="modal-body">
+        <div id="content">
+              <div class="contaginer">
+
+                 <div id="approval_nav">
+                         <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                            <li class="active"><a href="#red" data-toggle="tab">Pending</a></li>
+                            <li><a href="#orange" data-toggle="tab">Approved</a></li>
+                             <li><a href="#rejections" data-toggle="tab">Rejected</a></li>
+                        </ul>
+                        <div id="my-tab-content" class="tab-content ">
+                        <div class="tab-pane approval_tab_panes active" id="red">
+                            
+                            <ul style="list-style-type:none;padding-left:10px;">
+                                <li class="myCourseDetails" ng-repeat="course in course_data | filter:{status: 'pending'}" class="approvals_li" >
+                   
+                                    <table class="table approval_table">
+                                        <tr>
+                                            <td style="width:10%">
+                                                <img class="ApprovalUserIcon" src="user-alt-128.png"/>
+                                            </td>
+                                            <td style="width:80%">
+                                                <table class="table approval_table">
+                                                    <tr>
+                                                        <td  style="width:60%">
+                                                            <strong>Student id:</strong>&nbsp;<span class="details">{{course.studentid}}</span>
+                                                        </td>
+                                        
+                                                        <td>
+                                                             <strong>Team Id:</strong>&nbsp;<span class="Details">{{course.teamid}}</span>
+                                                        </td>
+                                       
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <strong>Course Name:</strong>&nbsp;<span class="Details">{{course.name}}</span>
+                                                        </td>
+                                                        <td>
+                                                            <strong>Track:</strong>&nbsp;<span class="Details">{{course.track}}</span>
+                                                        </td>
+                                      
+                                                    </tr>
+                                                    <tr>
+                                                          <td>
+                                                             <strong>Status:</strong>&nbsp;<span>{{course.status}}</span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+
+                                            </td>
+                                            <td class="type_check">
+                                                 <input type="checkbox" id="fgg"  data="{{course.id}}" ng-click="myfunc($event)" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane approval_tab_panes" id="orange">
+                         
+             <ul style="list-style-type:none;padding-left:10px;">
+                <li class="myCourseDetails" ng-repeat="course in course_data | filter:{status: 'approved'}" class="approvals_li" >
+                   
+                    <table class="table approval_table">
+                        <tr>
+                            <td style="width:10%">
+                                <img class="ApprovalUserIcon" src="user-alt-128.png"/>
+                            </td>
+                            <td style="width:80%">
+                                <table class="table approval_table">
+                                    <tr>
+                                        <td  style="width:60%">
+                                            <strong>Student id:</strong>&nbsp;<span class="details">{{course.studentid}}</span>
+                                        </td>
+                                        
+                                        <td>
+                                             <strong>Team Id:</strong>&nbsp;<span class="Details">{{course.teamid}}</span>
+                                        </td>
+                                       
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>Course Name:</strong>&nbsp;<span class="Details">{{course.name}}</span>
+                                        </td>
+                                        <td>
+                                            <strong>Track:</strong>&nbsp;<span class="Details">{{course.track}}</span>
+                                        </td>
+                                      
+                                    </tr>
+                                    <tr>
+                                          <td>
+                                             <strong>Status:</strong>&nbsp;<span>{{course.status}}</span>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </td>
+                            <td class="type_check">
+                                 <input type="checkbox" id="Checkbox1"  data="{{course.id}}" ng-click="myfunc($event)" />
+                            </td>
+                        </tr>
+                        
+
+
+                    </table>
+                    </li></ul>
+                        
+                    </div>
+                          <div class="tab-pane approval_tab_panes" id="rejections">
+                         
+             <ul style="list-style-type:none;padding-left:10px;">
+                <li class="myCourseDetails" ng-repeat="course in course_data | filter:{status: 'rejected'}" class="approvals_li" >
+                   
+                    <table class="table approval_table">
+                        <tr>
+                            <td style="width:10%">
+                                <img class="ApprovalUserIcon" src="user-alt-128.png"/>
+                            </td>
+                            <td style="width:80%">
+                                <table class="table approval_table">
+                                    <tr>
+                                        <td  style="width:60%">
+                                            <strong>Student id:</strong>&nbsp;<span class="details">{{course.studentid}}</span>
+                                        </td>
+                                        
+                                        <td>
+                                             <strong>Team Id:</strong>&nbsp;<span class="Details">{{course.teamid}}</span>
+                                        </td>
+                                       
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>Course Name:</strong>&nbsp;<span class="Details">{{course.name}}</span>
+                                        </td>
+                                        <td>
+                                            <strong>Track:</strong>&nbsp;<span class="Details">{{course.track}}</span>
+                                        </td>
+                                      
+                                    </tr>
+                                    <tr>
+                                          <td>
+                                             <strong>Status:</strong>&nbsp;<span>{{course.status}}</span>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </td>
+                            <td class="type_check">
+                                 <input type="checkbox" id="Checkbox2"  data="{{course.id}}" ng-click="myfunc($event)" />
+                            </td>
+                        </tr>
+                        
+
+
+                    </table>
+                    </li></ul>
+                        
+                    </div>
+                </div>
+                </div>
+             </div>
+        </div>
+      </div> <!-- modal-body -->
+      <div class="modal-footer">
+        <button id="approve_course" class="btn btn-custom-success btn-raised" ng-click="approve()">Approve</button>
+        <button id="reject_course" class="btn btn-custom btn-raised" ng-click="reject()">Reject</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

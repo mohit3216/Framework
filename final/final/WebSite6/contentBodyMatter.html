@@ -1,0 +1,281 @@
+﻿<div class="row">
+    <div class="col-lg-2">
+        <div class="panel panel-inverse">
+            <div class="panel-heading">Performance</div>
+            <div class="panel-body left_cicular_progress_super_dash">
+                
+                <div ng-controller="teamCtrl" >
+                    <div class="progress progress_round ng-cloak" ng-style="getStyle()">{{ preciseCurrent || current }} %</div>
+                    <div
+                        round-progress
+                        max="max"
+                        current="current"
+                        color="{{ getColor() }}"
+                        bgcolor="{{ bgColor }}"
+                        radius="{{ radius }}"
+                        semi="isSemi"
+                        rounded="rounded"
+                        stroke="{{ stroke }}"
+                        clockwise="clockwise"
+                        responsive="responsive"
+                        duration="{{ duration }}"
+                        animation="{{ currentAnimation }}"
+                        offset="{{ offset }}"
+                        animation-delay="{{ animationDelay }}"
+                        on-render="showPreciseCurrent">
+                    </div>
+                    <span class="MilestonesSpan">Milestone</span>
+                    
+                    <br />
+                </div>
+            
+            <div ng-controller="teamCtrl" >
+                    <div class="progress progress_round ng-cloak teamPerforma" ng-style="getStyle()">{{ preciseCurrent || current }} %</div>
+                    <div
+                        round-progress
+                        max="max"
+                        current="current"
+                        color="{{ getColor() }}"
+                        bgcolor="{{ bgColor }}"
+                        radius="{{ radius }}"
+                        semi="isSemi"
+                        rounded="rounded"
+                        stroke="{{ stroke }}"
+                        clockwise="clockwise"
+                        responsive="responsive"
+                        duration="{{ duration }}"
+                        animation="{{ currentAnimation }}"
+                        offset="{{ offset }}"
+                        animation-delay="{{ animationDelay }}"
+                        on-render="showPreciseCurrent">
+                    </div>
+                    <span class="TeamPerformanceSpan">Team performance</span>
+                </div>
+            
+            
+            
+            </div><!------------------------------------panel body---------------------------------->
+        </div>
+        
+    </div>
+    <!-- begin col-6 -->
+    <div class="col-lg-6">
+      <!-- begin panel -->
+      <div class="panel panel-inverse">
+        <div class="panel-heading">
+          <div class="panel-heading-btn">
+            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-lime" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+          </div>
+          <h4 class="panel-title">Team Performance <small>monthly stat</small></h4>
+        </div>
+        <div class="panel-body teams_performa_graph_super_dash">
+          <div class="panel-option team_performa_graph_super_dash_opt">
+            <div class="dropdown pull-right">
+              <a href="javascript:;" class="btn btn-white btn-rounded btn-sm" data-toggle="dropdown">Change Date <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:;">Last Week</a></li>
+                <li><a href="javascript:;">Last Month</a></li>
+                <li><a href="javascript:;">Last Year</a></li>
+              </ul>
+            </div>
+            <div class="text-ellipsis">Date: 1 November 2015 - 30 November 2015</div>
+          </div>
+
+          
+        <div class="row" ng-controller="ChartController" style="padding:20px;">
+            <div class="row" >
+                <canvas id="c" width="300" height="500"></canvas>
+            </div> <!-- row -->
+             <div class="row">
+                 <div class="col-md-2 col-sm-2 col-xs-4" ng-repeat="values in filled">
+                
+                    <ul ng-class="'t'+values.id" ></ul><span ng-class="'span'+values.id" >{{values.label}}</span>
+                
+                 </div>
+             
+                
+              </div> <!-- row -->
+        </div>
+        </div>
+      </div>
+      <!-- end panel -->
+    </div>
+    <link href="calender/css/responsive-calendar.css" rel="stylesheet">
+    <!-- end col-6 -->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>-->
+    <!-- begin col-6 -->
+    <div class="col-lg-4">
+      <!-- begin panel -->
+      <div class="panel panel-inverse">
+        <div class="panel-heading">
+          <div class="panel-heading-btn">
+            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-lime" data-click="panel-expand" data-original-title="" title=""><i class="fa fa-expand"></i></a>
+            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse" data-original-title="" title=""><i class="fa fa-minus"></i></a>
+            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+          </div>
+          <h4 class="panel-title">Team Analysis <small>Weekly stat</small></h4>
+        </div>
+        <div class="panel-body p-b-0">
+          <!-- begin row -->
+            <div class="panel-option">
+            <div class="dropdown pull-right">
+              <a href="javascript:;" class="btn btn-white btn-rounded btn-sm" data-toggle="dropdown">Change Date <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:;">Last Week</a></li>
+                <li><a href="javascript:;">Last Month</a></li>
+              </ul>
+            </div>
+            <div class="text-ellipsis">Date: 1 November 2015 - 30 November 2015</div>
+          </div>
+            
+          <div class="row barchart">
+                    <canvas id="canvas" height="200" width="300"></canvas>
+              <br />
+            <br />
+              <br />
+                <div class="row barcharttags">
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                         <ul class="below"></ul>
+                        <span class="spanbelow"><b>1</b> : Poor</span>
+
+                    </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                         <ul class="below"></ul>
+                        <span class="spanbelow"><b>1</b> : Average</span>
+
+                    </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                         <ul class="below"></ul>
+                        <span class="spanbelow"><b>1</b> : Good</span>
+
+                    </div>
+                    
+                    
+                   </div>
+                </div>
+                <script src="charts/js/barchartjs.js"></script>
+          </div>
+          <!-- end row -->
+        </div>
+      </div>
+      <!-- end panel -->
+    </div>
+    <!-- end col-6 -->
+  </div>
+  <script src="teamAnalysisJS.js"></script>
+  <div class="row">
+    <!-- begin col-4 -->
+    <div class="col-md-5 ui-sortable">
+      <!-- begin panel -->
+      <div class="panel panel-inverse" data-sortable-id="index-2">
+        <div class="panel-heading">
+          <h4 class="panel-title">Today's Schedule <span class="label label-success pull-right">4 events</span></h4>
+        </div>
+        <div class="panel-body bg-silver">
+
+             <div class="row">
+          <!-- CALENDER
+              ===================================================== -->
+       
+            
+      <!-- Responsive calendar - START -->
+    	<div class="responsive-calendar">
+        <div class="controls">
+            <a class="pull-left" data-go="prev"><div class="btn btn-primary" style="margin-right:10px"><</div></a>
+            <a class="pull-left" data-go="next"><div class="btn btn-primary">></div></a>
+            <h4 ><span class="cal_year_month" data-head-year></span> <span data-head-month></span></h4>
+            <!-- BAAD ME ZARURAT PAD SAKTI HAI -->
+         <!--<div class="pull-right">
+            <div class="btn-group">
+  <button type="button" class="btn btn-primary">Month</button>
+  <button type="button" class="btn btn-primary">Week</button>
+  <button type="button" class="btn btn-primary">Day</button>
+</div>
+             </div>-->  
+            <div class="pull-right">
+             <div class="dropdown" style="margin-right:5px">
+    <button class="btn btn-default dropdown-toggle cal_batch_btn" type="button" data-toggle="dropdown">BATCHES
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      
+      <li><a href="#">CHN15DS003</a></li>
+      <li><a href="#">CHN15AJ046</a></li>
+      <li><a href="#">CHN15CJ002</a></li>
+      
+    </ul>
+  </div>
+    </div>    
+     
+        
+        
+        
+        
+        </div><hr/>
+       
+           
+            
+            
+            
+            
+            
+             <div class="day-headers">
+          <div class="day header">Mon</div>
+          <div class="day header">Tue</div>
+          <div class="day header">Wed</div>
+          <div class="day header">Thu</div>
+          <div class="day header">Fri</div>
+          <div class="day header">Sat</div>
+          <div class="day header">Sun</div>
+        </div>
+        <div class="days" data-group="days">
+          
+        </div>
+      </div>
+      <!-- Responsive calendar - END -->
+    
+    
+        </div> <!-- Calender -->
+      
+        </div>
+        
+      </div>
+      <!-- end panel -->
+    </div>
+    <!-- end col-4 -->
+    <!-- begin col-4 -->
+    <div class="col-md-7 ui-sortable">
+      <!-- begin panel -->
+      <div class="panel panel-inverse" data-sortable-id="index-3">
+        <div class="panel-heading">
+          <h4 class="panel-title">Today's Schedule</h4>
+        </div>
+       
+      </div>
+      <!-- end panel -->
+         
+    <script src="calender/js/jquery.js"></script>
+   <script src="calender/js/responsive-calendar.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".responsive-calendar").responsiveCalendar({
+                time: '2016-01',
+                events: {
+                    "2013-04-30": { "number": 5, "url": "" },
+                    "2013-04-26": { "number": 1, "url": "" },
+                    "2013-05-03": { "number": 1 },
+                    "2013-06-12": {},
+                    "2016-02-19": {},
+                    "2016-02-27": { "number":4,"url": "" }
+
+                }
+            });
+        });
+    </script>
+    </div>
+    <!-- end col-4 -->
+    <!-- begin col-4 -->
+    
+    <!-- end col-4 -->
+  </div>

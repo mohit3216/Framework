@@ -1,0 +1,104 @@
+﻿
+<body >
+     
+    
+     <table id="example" class="display" cellspacing="0" width="100%">
+       
+    </table>
+
+
+    
+    <script>
+        var dataSet = [["",123451, "Amlan", 1, "Dot Net"],
+    ["", 343354, "Ayush", 2, "Java"],
+    ["", 565665, "Mayank", 1, "Dot Net"],
+    ["", 565656, "Shobhit", 3, "Java"],
+    ["", 909643, "Palak", 4, "C++"],
+    ["", 235753, "Charmi", 2, "Dot Net"],
+    ["", 565757, "Apeksha", 5, "Dot Net"],
+    ["", 676789, "Shubham", 4, "C++"],
+    ["", 687090, "Navneet", 3, "PHP"],
+    ["", 235656, "Padmanav", 2, "C++"],
+    ["", 678988, "Subha", 4, "PHP"],
+    ["", 244546, "Tonmoy", 5, "PHP"],
+    ["", 678989, "Alok", 4, "PHP"],
+    ["", 909009, "Arpit", 2, "Dot Net"],
+    ["", 234443, "Arjun", 1, "Dot Net"],
+    ["", 423556, "Parshav", 3, "Python"],
+    ["", 676567, "Shivender", 4, "Dot Net"],
+    ["", 568586, "Paras", 5, "Python"],
+    ["", 345435, "Hemant", 5, "Dot Net"],
+    ["", 678787, "Ankush", 1, "Java"],
+    ["", 289900, "Amlan", 1, "Dot Net"],
+    ["", 454677, "Ayush", 2, "Java"],
+    ["", 898808, "Mayank", 1, "Dot Net"],
+    ["", 990909, "Shobhit", 3, "Java"],
+    ["", 534436, "Palak", 4, "C++"],
+    ["", 454355, "Charmi", 2, "Dot Net"],
+    ["", 745354, "Apeksha", 5, "Dot Net"],
+    ["", 834543, "Shubham", 4, "C++"],
+    ["", 989899, "Navneet", 3, "PHP"],
+    ["", 145660, "Padmanav", 2, "C++"],
+    ["", 145661, "Subha", 4, "PHP"],
+    ["", 123442, "Tonmoy", 5, "PHP"],
+    ["", 178783, "Alok", 4, "PHP"],
+    ["", 178784, "Arpit", 2, "Dot Net"],
+    ["", 135455, "Arjun", 1, "Dot Net"],
+    ["", 167666, "Parshav", 3, "Python"],
+    ["", 122227, "Shivender", 4, "Dot Net"],
+    ["", 100568, "Paras", 5, "Python"],
+    ["", 145669, "Hemant", 5, "Dot Net"],
+    ["", 246660, "Ankush", 1, "Java"],
+    ["", 134544, "Amlan", 1, "Dot Net"],
+    ["", 223444, "Ayush", 2, "Java"],
+    ["", 352343, "Mayank", 1, "Dot Net"],
+    ["", 445455, "Shobhit", 3, "Java"],
+    ["", 523423, "Palak", 4, "C++"],
+    ["", 645454, "Charmi", 2, "Dot Net"],
+    ["", 454554, "Apeksha", 5, "Dot Net"],
+    ["", 823433, "Shubham", 4, "C++"],
+    ["", 923424, "Navneet", 3, "PHP"],
+    ["", 235310, "Padmanav", 2, "C++"],
+    ["", 565611, "Subha", 4, "PHP"],
+    ["", 565612, "Tonmoy", 5, "PHP"],
+    ["", 565513, "Alok", 4, "PHP"],
+    ["", 909014, "Arpit", 2, "Dot Net"],
+    ["", 189895, "Arjun", 1, "Dot Net"],
+    ["", 156776, "Parshav", 3, "Python"],
+    ["", 145537, "Shivender", 4, "Dot Net"],
+    ["", 134558, "Paras", 5, "Python"],
+    ["", 135559, "Hemant", 5, "Dot Net"],
+    ["", 223440, "Ankush", 1, "Java"]
+        ];
+
+        
+        $(document).ready(function () {
+
+
+
+            $('#example').DataTable({
+                "bFilter": true,
+                data: dataSet,
+                columns: [
+                    { title: "" },
+                    { title: "ID" },
+                    { title: "Name" },
+                    { title: "Team ID" },
+                    { title: "Track" }
+                ],
+                columnDefs: [{
+                    orderable: false,
+                    className: 'select-checkbox',
+                    targets: 0
+                }],
+                select: {
+                    style: 'os',
+                    selector: 'td:first-child'
+                },
+                order: [[1, 'asc']]
+            });
+
+
+        });
+    </script>
+</body>

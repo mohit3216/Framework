@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{68197E92-EE80-47D1-8193-69261A7A0BAA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>final</RootNamespace>
+    <AssemblyName>final</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="myteam\app.js" />
+    <Content Include="myteam\demo.js" />
+    <Content Include="myteam\index.html" />
+    <Content Include="myteam\myteamMain.html" />
+    <Content Include="myteam\roundprogress.js" />
+    <Content Include="myteam\script.js" />
+    <Content Include="myteam\style.css" />
+    <Content Include="swf\copy_csv_xls.swf" />
+    <Content Include="swf\copy_csv_xls_pdf.swf" />
+    <Content Include="Web.config" />
+    <Content Include="WebSite6\angular-gridster.min.css" />
+    <Content Include="WebSite6\angular-gridster.min.js" />
+    <Content Include="WebSite6\angular.min.js" />
+    <Content Include="WebSite6\approval\StyleSheet.css" />
+    <Content Include="WebSite6\badges.html" />
+    <Content Include="WebSite6\bootstrap-popover-x.css" />
+    <Content Include="WebSite6\bootstrap-popover-x.js" />
+    <Content Include="WebSite6\bootstrap.min.css" />
+    <Content Include="WebSite6\bootstrap.min.js" />
+    <Content Include="WebSite6\calender\css\responsive-calendar.css" />
+    <Content Include="WebSite6\calender\js\event.js" />
+    <Content Include="WebSite6\calender\js\jquery.js" />
+    <Content Include="WebSite6\calender\js\responsive-calendar.js" />
+    <Content Include="WebSite6\calender\js\responsive-calendar.min.js" />
+    <Content Include="WebSite6\calender\style.css" />
+    <Content Include="WebSite6\Chart.min.js" />
+    <Content Include="WebSite6\charts\css\barchartstyle.css" />
+    <Content Include="WebSite6\charts\css\studentGraph.css" />
+    <Content Include="WebSite6\charts\css\StyleSheet.css" />
+    <Content Include="WebSite6\charts\index 2.html" />
+    <Content Include="WebSite6\charts\js\barchartjs.js" />
+    <Content Include="WebSite6\charts\js\JavaScript.js" />
+    <Content Include="WebSite6\contentBody.html" />
+    <Content Include="WebSite6\contentBodyMatter.html" />
+    <Content Include="WebSite6\demo.js" />
+    <Content Include="WebSite6\footer.html" />
+    <Content Include="WebSite6\index.html" />
+    <Content Include="WebSite6\masterData\angular.min.js" />
+    <Content Include="WebSite6\masterData\bootstrap.min.css" />
+    <Content Include="WebSite6\masterData\bootstrap.min.js" />
+    <Content Include="WebSite6\masterData\dataTables.bootstrap.css" />
+    <Content Include="WebSite6\masterData\dataTables.bootstrap.js" />
+    <Content Include="WebSite6\masterData\dataTables.tableTools.min.css" />
+    <Content Include="WebSite6\masterData\dataTables.tableTools.min.js" />
+    <Content Include="WebSite6\masterData\HtmlPage.html" />
+    <Content Include="WebSite6\master_data.html" />
+    <Content Include="WebSite6\overallteamReport\CircularBar.html" />
+    <Content Include="WebSite6\overallteamReport\overallTeamReport.html" />
+    <Content Include="WebSite6\overallteamReport\overallTeamReportModule.js" />
+    <Content Include="WebSite6\overallteamReport\psWidgetBodyDirective.js" />
+    <Content Include="WebSite6\overallteamReport\psWidgetBodyTemplate.html" />
+    <Content Include="WebSite6\roundprogress.js" />
+    <Content Include="WebSite6\script.js" />
+    <Content Include="WebSite6\scriptCircle.js" />
+    <Content Include="WebSite6\sidebar-left.html" />
+    <Content Include="WebSite6\style.css" />
+    <Content Include="WebSite6\user-alt-128.png" />
+    <Content Include="WebSite6\wwaTemperature\wwaTemperature.css" />
+    <Content Include="WebSite6\wwaTemperature\wwaTemperatureDirective.js" />
+    <Content Include="WebSite6\wwaTemperature\wwaTemperatureTemplate.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="myteam\README.md" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="WebSite6\calender\css\less\responsive-calendar.less" />
+    <Content Include="WebSite6\calender\js\coffee\responsive-calendar.coffee" />
+    <Content Include="WebSite6\README.md" />
+    <Content Include="WebSite6\Web.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57757/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

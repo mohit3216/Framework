@@ -1,0 +1,44 @@
+﻿.below
+{
+    height:10px;
+     width:5px; 
+     border-radius:10px;
+      background-color:#626262;
+      
+}
+.on
+{
+    height:10px; 
+    width:5px; 
+    border-radius:10px; 
+    background-color:orange;
+   
+}
+
+.above
+{
+    height:10px; 
+    width:5px; 
+    border-radius:10px; 
+    background-color:green;
+   
+}
+.spanabove {
+     color:green;
+     
+}
+.spanbelow {
+     color:#626262;
+}
+.spanon {
+     color:orange;
+}
+.barcharttags {
+    padding-bottom:10px;
+    padding-left:50px;
+}
+
+.barchart {
+    padding-bottom:5px;
+}
+

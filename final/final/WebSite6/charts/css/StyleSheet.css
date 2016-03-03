@@ -1,0 +1,84 @@
+﻿/* Team graph data */
+.t1
+{
+    height:10px;
+     width:10px; 
+     border-radius:10px;
+      background-color:#0080FF;
+}
+.t2
+{
+    height:10px; 
+    width:10px; 
+    border-radius:10px; 
+    background-color:rgba(151,187,205,1);
+
+}
+
+.t3
+{
+    height:10px; 
+    width:10px; 
+    border-radius:10px; 
+    background-color:rgba(17, 212, 180,1);
+
+}
+
+
+.t4
+{
+    height:10px; 
+    width:10px; 
+    border-radius:10px; 
+    background-color:#ff4da6;
+
+}
+
+.t5
+{
+    height:10px; 
+    width:10px; 
+    border-radius:10px; 
+    background-color:#ff751a;
+
+}
+
+.t6
+{
+    height:10px; 
+    width:10px; 
+    border-radius:10px; 
+    background-color:rgba(151,187,205,1);
+
+}
+
+.span1
+{
+   color:#0080FF;
+}
+.span2
+{
+   color:rgba(151,187,205,1);
+
+}
+.span3
+{
+   color:rgba(17, 212, 180,1);
+
+}
+.span4
+{
+   color:#ff4da6;
+
+}
+.span5
+{
+   color:#ff751a;
+
+}
+.span6
+{
+   color:rgba(151,187,205,1);
+
+}
+

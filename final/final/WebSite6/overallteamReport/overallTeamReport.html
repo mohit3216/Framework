@@ -1,0 +1,55 @@
+﻿ <div class="row">
+            <div class="dropdown" style="float:right; margin: 10px">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <i class="fa fa-plus"></i>&nbsp;Add Widget
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li ng-repeat="widget in widgetsDefinations">
+                      <a role="menuitem" ng-click="addNewWidget(widget)">{{widget.title}}</a>
+                  </li>    
+               
+              </ul>
+            </div>
+        </div>
+<my-badge></my-badge>
+
+
+<div gridster ="gridsterOpts">
+    <ul>
+        <li gridster-item="item" ng-repeat="item in widgets">
+            <div class="ps-widget-header">
+                <span>{{item.title}}</span>
+                <div class="ps-widgets-header-buttons">
+                    <button class="btn btn-default pull-right">
+                        <i class="fa fa-remove"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="ps-widget-body circular-progress-bar-body" >
+                
+                {{item.template}}
+                <!--<div class="circular-progress-bar-percentage">
+                    {{current}}
+                </div>
+                <div
+                    round-progress
+                    max="max"
+                    current="current"
+                    color="#45ccce"
+                    bgcolor="#eaeaea"
+                    radius="70"
+                    stroke="17"
+                    semi="false"
+                    rounded="false"
+                    clockwise="true"
+                    responsive="false"
+                    duration="800"
+                    animation="easeInOutQuart"
+                    animation-delay="0">
+                </div>-->
+
+            </div>
+        </li>
+    </ul>
+</div>
